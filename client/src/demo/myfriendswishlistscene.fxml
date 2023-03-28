@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox fx:id="container" minHeight="-Infinity" minWidth="-Infinity" prefHeight="102.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.MyfriendswishlistsceneController">
+   <children>
+      <Pane fx:id="con" prefHeight="102.0" prefWidth="114.0" style="-fx-background-color: #fff;">
+         <children>
+            <ImageView fx:id="wishimg" fitHeight="73.0" fitWidth="54.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/5.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="itemIdLabel" layoutX="27.0" layoutY="94.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         </children>
+      </Pane>
+      <VBox prefHeight="102.0" prefWidth="240.0" style="-fx-background-color: #fff;">
+         <children>
+            <Pane prefHeight="9.0" prefWidth="197.0" style="-fx-background-color: #fff;" />
+            <HBox prefHeight="24.0" prefWidth="207.0" style="-fx-background-color: #fff;">
+               <children>
+                  <Text fill="#2b3467" strokeType="OUTSIDE" strokeWidth="0.0" text="Product:" wrappingWidth="62.6708984375">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="ProdNameLabel" alignment="TOP_LEFT" prefHeight="75.0" prefWidth="133.0" text="Prod name" />
+               </children>
+            </HBox>
+            <HBox prefHeight="22.0" prefWidth="207.0">
+               <children>
+                  <Text fill="#2b3467" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" wrappingWidth="50.6708984375">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="PriceLabel" alignment="TOP_LEFT" prefHeight="75.0" prefWidth="133.0" style="-fx-background-color: #fff;" text="Price$$" />
+               </children>
+            </HBox>
+            <HBox prefHeight="19.0" prefWidth="207.0">
+               <children>
+                  <Label ellipsisString=".." prefHeight="27.0" prefWidth="138.0" text="Total Contribution: " textAlignment="CENTER" textFill="#2b3467" textOverrun="CLIP" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CurrContribution" prefHeight="24.0" prefWidth="67.0" style="-fx-background-color: #fff;" text="\$$$$" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="102.0" prefWidth="175.0">
+         <children>
+            <Pane prefHeight="102.0" prefWidth="144.0" style="-fx-background-color: #fff;">
+               <children>
+                  <TextField fx:id="amountLabel" alignment="CENTER" layoutX="15.0" layoutY="9.0" prefHeight="31.0" prefWidth="112.0" promptText="Enter Amount" style="-fx-border-color: #2B3467; -fx-border-radius: 20,20,20,20; -fx-background-radius: 20,20,20,20;">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" color="#e3e3e3a4" />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="26.0" layoutY="51.0" mnemonicParsing="false" onAction="#contribute" style="-fx-border-radius: 20,20,20,20;" styleClass="update-btn" stylesheets="@p.css" text="Contribute" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</HBox>
